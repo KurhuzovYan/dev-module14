@@ -37,7 +37,7 @@ public class NoteService {
 
     public List<Note> getAllNotes() {
         List<Note> notes = new ArrayList<>();
-        noteRepository.getAllNotes().forEach(note -> notes.add(note));
+        noteRepository.findAll().forEach(note -> notes.add(note));
         return notes;
     }
 }
